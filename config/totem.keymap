@@ -24,8 +24,6 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
-    flavor = "tap-preferred";
 };
 
 / {
@@ -67,9 +65,20 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <220>;
             require-prior-idle-ms = <0>;
+        };
+
+        mt_shift: mt_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            quick-tap-ms = <100>;
         };
     };
 
@@ -95,10 +104,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q  &kp W  &kp E                      &kp R             &kp T        &kp Y             &kp U             &kp I                         &kp O    &kp P
-          &kp A  &kp S  &kp D                      &mt LEFT_SHIFT F  &kp G        &kp H             &mt LEFT_SHIFT J  &kp K                         &kp L    &kp SEMI
-&kp NUBS  &kp Z  &kp X  &kp C                      &kp V             &kp B        &kp N             &kp M             &kp COMMA                     &kp DOT  &kp FSLH  &kp SINGLE_QUOTE
-                        &mt_thumb LEFT_WIN DELETE  &lt 1 TAB         &kp SPACE    &kp LEFT_CONTROL  &lt 2 ESC         &mt_thumb LEFT_ALT BACKSPACE
+          &kp Q  &kp W  &kp E                      &kp R                   &kp T        &kp Y             &kp U                   &kp I                         &kp O    &kp P
+          &kp A  &kp S  &kp D                      &mt_shift LEFT_SHIFT F  &kp G        &kp H             &mt_shift LEFT_SHIFT J  &kp K                         &kp L    &kp SEMI
+&kp NUBS  &kp Z  &kp X  &kp C                      &kp V                   &kp B        &kp N             &kp M                   &kp COMMA                     &kp DOT  &kp FSLH  &kp SINGLE_QUOTE
+                        &mt_thumb LEFT_WIN DELETE  &lt 1 TAB               &kp SPACE    &kp LEFT_CONTROL  &lt 2 ESC               &mt_thumb LEFT_ALT BACKSPACE
             >;
         };
 
