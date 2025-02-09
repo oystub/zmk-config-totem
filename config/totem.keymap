@@ -156,9 +156,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)    &kp LS(N6)    &kp LS(N7)      &kp RA(U)   &kp SQT     &kp PLUS
-        &kp RA(A)         &trans            &kp RA(S)         &trans            &trans        &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)       &kp RA(F19)       &trans            &trans            &trans        &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
+        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)    &kp LS(N6)    &kp LS(N7)      &kp LS(NUMBER_0)  &kp SQT     &kp PLUS
+        &kp RA(A)         &trans            &kp RA(S)         &trans            &trans        &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)        &kp RA(N4)  &kp RA(O)
+&trans  &kp RA(F18)       &kp RA(F19)       &trans            &trans            &trans        &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV        &kp C_NEXT  &kp BSLH   &trans
                                             &trans            &trans            &mo 3         &trans        &kp C_PP        &trans
             >;
         };
