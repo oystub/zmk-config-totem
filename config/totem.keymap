@@ -136,8 +136,8 @@
 
             bindings = <
         &kp ESC    &trans     &kp UP    &kp EQUAL  &kp RA(N7)    &kp RA(N0)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PLUS
-        &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp RA(N8)    &kp RA(N9)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS
-&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LS(N8)    &kp LS(N9)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
+        &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LS(N8)    &kp LS(N9)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS
+&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp RA(N8)    &kp RA(N9)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
                               &trans    &trans     &trans        &mo 3       &kp KP_N0  &trans
             >;
         };
@@ -162,7 +162,7 @@
 
             bindings = <
         &kp GRAVE    &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)    &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N0)  &kp LS(MINUS)
-        &kp RA(A)    &trans            &kp RA(S)         &trans            &trans              &kp C_MUTE    &kp LS(RA(N4))    &kp RA(N5)  &kp RA(N4)  &kp RA(O)
+        &kp RA(A)    &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(NUMBER_4)  &trans              &kp C_MUTE    &kp LS(RA(N4))    &kp RA(N5)  &kp RA(N4)  &kp RA(O)
 &trans  &kp RA(F18)  &kp RA(F19)       &trans            &trans            &trans              &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PREV  &kp C_NEXT  &kp BSLH       &kp NON_US_HASH
                                        &trans            &trans            &mo 3               &trans        &kp C_PP          &trans
             >;
