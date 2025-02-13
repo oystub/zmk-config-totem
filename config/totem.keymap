@@ -135,10 +135,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &trans     &kp UP    &kp EQUAL  &kp RA(N7)    &kp RA(N0)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PLUS
-        &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LS(N8)    &kp LS(N9)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS
-&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp RA(N8)    &kp RA(N9)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp LA(LCTRL)
-                              &trans    &trans     &trans        &mo 3       &kp KP_N0  &trans
+                  &kp ESC    &trans     &kp UP    &kp EQUAL  &kp RA(N7)    &kp RA(N0)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PLUS
+                  &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LS(N8)    &kp LS(N9)  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp MINUS
+&kp LA(LC(LEFT))  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp RA(N8)    &kp RA(N9)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp LA(LC(RIGHT))
+                                        &trans    &trans     &trans        &mo 3       &kp KP_N0  &trans
             >;
         };
 
