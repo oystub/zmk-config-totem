@@ -61,7 +61,7 @@
         };
 
         win {
-            bindings = <&kp LGUI>;
+            bindings = <&kp LEFT_GUI>;
             key-positions = <32 37>;
             slow-release;
         };
