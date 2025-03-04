@@ -61,7 +61,7 @@
         };
 
         win {
-            bindings = <&sk LEFT_GUI>;
+            bindings = <&sk RIGHT_GUI>;
             key-positions = <32 37>;
         };
     };
