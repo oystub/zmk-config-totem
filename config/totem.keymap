@@ -63,6 +63,7 @@
         win {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <32 37>;
+            slow-release;
         };
     };
 
