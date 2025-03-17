@@ -57,10 +57,9 @@
             layers = <0>;
         };
 
-        reset {
-            bindings = <&bt BT_CLR_ALL>;
+        bt_reset {
+            bindings = <&bt_reset BT_CLR_ALL>;
             key-positions = <4 14 25>;
-            layers = <3>;
         };
     };
 
@@ -118,6 +117,16 @@
             label = "LAYER3";
             #binding-cells = <0>;
             bindings = <&mo 3>, <&tog 3>;
+        };
+
+        bt_reset: bt_reset {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_RESET";
+            bindings = <&bt>;
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            hold-trigger-key-positions = <4 14 25 5 15 26>;
         };
     };
 
