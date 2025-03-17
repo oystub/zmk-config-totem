@@ -103,14 +103,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER2";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&sl 2>;
+            bindings = <&mo 2>, <&tog 2>;
         };
 
         layer1: layer1 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER1";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&sl 1>;
+            bindings = <&mo 1>, <&tog 1>;
         };
     };
 
