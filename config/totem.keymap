@@ -55,11 +55,6 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <18 17>;
         };
-
-        bt_clear {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <4 14 25>;
-        };
     };
 
     behaviors {
