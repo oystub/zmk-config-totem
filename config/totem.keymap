@@ -32,23 +32,26 @@
         esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&esc_off_macro>;
+            bindings = <&key_lock 4 ESCAPE>;
         };
 
         ret {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
+            layers = <0 1 2 3>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12 13>;
+            layers = <0 1 2 3>;
         };
 
         super {
             bindings = <&kp LEFT_GUI>;
             key-positions = <32 37>;
             slow-release;
+            layers = <0 1 2 3>;
         };
 
         aa {
@@ -60,16 +63,19 @@
         shift_combo_left {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <13 12>;
+            layers = <0 1 2 3>;
         };
 
         shift_combo_right {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <16 17>;
+            layers = <0 1 2 3>;
         };
 
         dual_shift {
             bindings = <&caps>;
             key-positions = <12 13 16 17>;
+            layers = <0 1 2 3>;
         };
     };
 
@@ -117,14 +123,14 @@
             #binding-cells = <0>;
             hold-time-ms = <2000>;
         };
-    };
 
-    macros {
-        esc_off_macro: esc_off_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &poweroff>;
-            label = "ESC_OFF_MACRO";
+        key_lock: key_lock {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_LOCK";
+            bindings = <&tog>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <2000>;
         };
     };
 
@@ -168,6 +174,15 @@
        &none  &bt BT_PRV  &out OUT_TOG  &bt BT_NXT  &none     &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
 &none  &none  &none       &none         &none       &none     &kp F11  &kp F12  &none   &none   &none    &none
                           &trans        &trans      &trans    &trans   &trans   &trans
+            >;
+        };
+
+        lock {
+            bindings = <
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none  &none
             >;
         };
     };
