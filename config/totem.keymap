@@ -117,13 +117,6 @@
             bindings = <&caps_word>, <&kp CAPSLOCK>;
         };
 
-        poweroff: poweroff {
-            compatible = "zmk,behavior-soft-off";
-            label = "POWEROFF";
-            #binding-cells = <0>;
-            hold-time-ms = <2000>;
-        };
-
         key_lock: key_lock {
             compatible = "zmk,behavior-hold-tap";
             label = "KEY_LOCK";
