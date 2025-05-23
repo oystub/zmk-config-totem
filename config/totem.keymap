@@ -32,7 +32,7 @@
         esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&mt_esc ESC 0>;
+            bindings = <&esc_off_macro>;
         };
 
         ret {
@@ -111,18 +111,26 @@
             bindings = <&caps_word>, <&kp CAPSLOCK>;
         };
 
-        mt_esc: mt_esc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_ESC";
-            bindings = <&kp>, <&soft_off>;
+        poweroff: poweroff {
+            compatible = "zmk,behavior-soft-off";
+            label = "POWEROFF";
+            #binding-cells = <0>;
+            hold-time-ms = <2000>;
+        };
+    };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <2000>;
+    macros {
+        esc_off_macro: esc_off_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &poweroff>;
+            label = "ESC_OFF_MACRO";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         base {
             label = "BASE";
             bindings = <
