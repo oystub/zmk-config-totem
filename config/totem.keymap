@@ -33,6 +33,7 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&key_lock 4 ESCAPE>;
+            layers = <0 1 2 3>;
         };
 
         ret {
@@ -125,6 +126,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
         };
+
+        tap_unlock: tap_unlock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_UNLOCK";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>, <&tog 4>;
+        };
     };
 
     keymap {
@@ -172,10 +180,10 @@
 
         lock {
             bindings = <
-       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+             &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
+             &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
+&tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
+                                       &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock
             >;
         };
     };
