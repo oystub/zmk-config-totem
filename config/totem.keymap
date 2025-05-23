@@ -58,12 +58,12 @@
         };
 
         shift_combo_left {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&shift_caps>;
             key-positions = <13 12>;
         };
 
         shift_combo_right {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&shift_caps>;
             key-positions = <16 17>;
         };
     };
@@ -97,6 +97,13 @@
             label = "NUMBERS";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 2>, <&sl 2>;
+        };
+
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
     };
 
@@ -172,7 +179,7 @@
             bindings = <
        &none  &mt_nav LS(LA(LC(LEFT))) LA(LC(LEFT))  &kp UP    &mt_nav LS(LA(LC(RIGHT))) LA(LC(RIGHT))  &kp C_VOL_UP        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5
        &none  &kp LEFT                               &kp DOWN  &kp RIGHT                                &kp C_PLAY_PAUSE    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0
-&none  &none  &kp PG_UP                              &kp CAPS  &kp PG_DN                                &kp C_VOL_DN        &none         &none         &trans        &trans        &trans  &none
+&none  &none  &kp PG_UP                              &none     &kp PG_DN                                &kp C_VOL_DN        &none         &none         &trans        &trans        &trans  &none
                                                      &trans    &trans                                   &trans              &trans        &mo 3         &trans
             >;
         };
