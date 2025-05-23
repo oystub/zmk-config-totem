@@ -173,16 +173,16 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                       &none       &none      &kp UP    &none      &kp RA(N7)    &kp RA(N0)  &kp N7        &kp N8        &kp N9        &mt KP_MULTIPLY KP_PLUS
-                                       &kp LSHIFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LS(N8)    &kp LS(N9)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt KP_DIVIDE KP_MINUS
-&mt_nav LA(LC(LS(LEFT))) LA(LC(LEFT))  &none       &kp PG_UP  &kp CAPS  &kp PG_DN  &kp RA(N8)    &kp RA(N9)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &mt COMMA PERIOD         &mt_nav LA(LC(LS(RIGHT))) LA(LC(RIGHT))
-                                                              &trans    &trans     &trans        &trans      &kp N0        &trans
+                                       &none       &none      &kp UP    &none      &kp C_VOL_UP        &none   &kp N7        &kp N8        &kp N9        &mt KP_MULTIPLY KP_PLUS
+                                       &kp LSHIFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_PLAY_PAUSE    &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt KP_DIVIDE KP_MINUS
+&mt_nav LA(LC(LS(LEFT))) LA(LC(LEFT))  &none       &kp PG_UP  &kp CAPS  &kp PG_DN  &kp C_VOL_DN        &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &mt COMMA PERIOD         &mt_nav LA(LC(LS(RIGHT))) LA(LC(RIGHT))
+                                                              &trans    &trans     &trans              &trans  &kp N0        &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        sym_media {
+        symbols {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "SYM";
@@ -199,10 +199,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp GRAVE      &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N0)     &kp LS(MINUS)
-       &kp LS(GRAVE)  &none             &kp RA(NUMBER_2)  &none             &kp SLASH           &kp MINUS     &kp NUHS          &kp EQUAL         &kp LS(EQUAL)  &kp RA(EQUAL)
-&none  &none          &kp RBKT          &kp LS(RBKT)      &kp RA(RBKT)      &none               &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PLAY_PAUSE  &kp C_PREV     &kp C_NEXT     &kp LS(NON_US_HASH)
-                                        &trans            &layer3           &trans              &trans        &trans            &trans
+       &mt LS(GRAVE) GRAVE    &kp LS(NUMBER_1)  &mt RA(NUMBER_2) LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)           &kp LS(N0)  &kp LS(MINUS)
+       &kp RIGHT_BRACKET      &kp LS(EQUAL)     &kp NUHS                       &kp RA(EQUAL)     &none               &kp RA(N7)  &kp LS(N8)        &kp EQUAL            &kp LS(N9)  &kp RA(N0)
+&none  &kp RA(RIGHT_BRACKET)  &kp SLASH         &kp LS(RBKT)                   &kp MINUS         &none               &kp NUBS    &kp RA(N8)        &kp LS(NON_US_HASH)  &kp RA(N9)  &kp LS(NON_US_BACKSLASH)  &none
+                                                &trans                         &layer3           &trans              &trans      &trans            &trans
             >;
         };
 
