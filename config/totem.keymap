@@ -143,6 +143,16 @@
             #binding-cells = <0>;
             bindings = <&none>, <&none>, <&tog 4>;
         };
+
+        clear_bt: clear_bt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CLEAR_BT";
+            bindings = <&bt>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <2000>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -181,10 +191,10 @@
         fn_bt {
             label = "FN";
             bindings = <
-       &none  &none       &none         &none       &none     &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-       &none  &bt BT_PRV  &out OUT_TOG  &bt BT_NXT  &none     &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&none  &none  &none       &none         &none       &none     &kp F11  &kp F12  &none   &none   &none    &none
-                          &trans        &trans      &trans    &trans   &trans   &trans
+       &none         &none         &none               &none         &none           &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&none  &none         &out OUT_USB  &clear_bt BT_CLR 0  &out OUT_BLE  &none           &kp F11  &kp F12  &none   &none   &none    &none
+                                   &trans              &trans        &trans          &trans   &trans   &trans
             >;
         };
 
