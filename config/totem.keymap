@@ -161,30 +161,30 @@
         symbols {
             label = "SYM";
             bindings = <
-       &mt LS(GRAVE) GRAVE    &kp LS(NUMBER_1)  &mt RA(NUMBER_2) LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)           &kp LS(N0)  &kp LS(MINUS)
-       &kp RIGHT_BRACKET      &kp LS(EQUAL)     &kp NUHS                       &kp RA(EQUAL)     &none               &kp RA(N7)  &kp LS(N8)        &kp EQUAL            &kp LS(N9)  &kp RA(N0)
-&none  &kp RA(RIGHT_BRACKET)  &kp SLASH         &kp LS(RBKT)                   &kp MINUS         &none               &kp NUBS    &kp RA(N8)        &kp LS(NON_US_HASH)  &kp RA(N9)  &kp LS(NON_US_BACKSLASH)  &none
-                                                &trans                         &mo 3             &trans              &trans      &trans            &trans
+        &mt LS(GRAVE) GRAVE    &kp LS(NUMBER_1)  &mt RA(NUMBER_2) LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)           &kp LS(N0)  &kp LS(MINUS)
+        &kp RIGHT_BRACKET      &kp LS(EQUAL)     &kp NUHS                       &kp RA(EQUAL)     &none               &kp RA(N7)  &kp LS(N8)        &kp EQUAL            &kp LS(N9)  &kp RA(N0)
+&trans  &kp RA(RIGHT_BRACKET)  &kp SLASH         &kp LS(RBKT)                   &kp MINUS         &none               &kp NUBS    &kp RA(N8)        &kp LS(NON_US_HASH)  &kp RA(N9)  &kp LS(NON_US_BACKSLASH)  &none
+                                                 &trans                         &mo 3             &trans              &trans      &trans            &trans
             >;
         };
 
         num_nav {
             label = "NUM";
             bindings = <
-       &none  &mt_nav LS(LA(LC(LEFT))) LA(LC(LEFT))  &kp UP    &mt_nav LS(LA(LC(RIGHT))) LA(LC(RIGHT))  &kp C_VOL_UP        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5
-       &none  &kp LEFT                               &kp DOWN  &kp RIGHT                                &kp C_PLAY_PAUSE    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0
-&none  &none  &kp PG_UP                              &none     &kp PG_DN                                &kp C_VOL_DN        &none         &none         &trans        &trans        &trans  &none
-                                                     &trans    &trans                                   &trans              &trans        &mo 3         &trans
+        &none  &mt_nav LS(LA(LC(LEFT))) LA(LC(LEFT))  &kp UP    &mt_nav LS(LA(LC(RIGHT))) LA(LC(RIGHT))  &kp C_VOL_UP        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5
+        &none  &kp LEFT                               &kp DOWN  &kp RIGHT                                &kp C_PLAY_PAUSE    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0
+&trans  &none  &kp PG_UP                              &none     &kp PG_DN                                &kp C_VOL_DN        &none         &none         &trans        &trans        &trans  &none
+                                                      &trans    &trans                                   &trans              &trans        &mo 3         &trans
             >;
         };
 
         fn_bt {
             label = "FN";
             bindings = <
-       &bt BT_CLR    &none         &none         &none         &none           &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&none  &none         &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &none           &kp F11  &kp F12  &none   &none   &none    &bt BT_CLR
-                                   &trans        &trans        &trans          &trans   &trans   &trans
+        &bt BT_CLR    &none         &none         &none         &none           &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &none         &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &none           &kp F11  &kp F12  &none   &none   &none    &bt BT_CLR
+                                    &trans        &trans        &trans          &trans   &trans   &trans
             >;
         };
 
