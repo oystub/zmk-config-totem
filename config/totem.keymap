@@ -156,10 +156,10 @@
         symbols {
             label = "SYM";
             bindings = <
-        &mt LS(GRAVE) GRAVE    &kp LS(NUMBER_1)  &mt RA(NUMBER_2) LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)           &kp LS(N0)  &kp LS(MINUS)
-        &kp RIGHT_BRACKET      &kp LS(EQUAL)     &kp NUHS                       &kp RA(EQUAL)     &none               &kp RA(N7)  &kp LS(N8)        &kp EQUAL            &kp LS(N9)  &kp RA(N0)
-&trans  &kp RA(RIGHT_BRACKET)  &kp SLASH         &kp LS(RBKT)                   &kp MINUS         &none               &kp NUBS    &kp RA(N8)        &kp LS(NON_US_HASH)  &kp RA(N9)  &kp LS(NON_US_BACKSLASH)  &trans
-                                                 &trans                         &mo 3             &trans              &trans      &trans            &trans
+        &mt LS(GRAVE) GRAVE    &kp LS(NUMBER_1)  &mt RA(NUMBER_2) LS(N2)  &kp LS(NUMBER_3)  &kp RA(NUMBER_4)    &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)           &kp LS(N0)  &kp LS(MINUS)
+        &kp RIGHT_BRACKET      &kp LS(EQUAL)     &kp NUHS                 &kp RA(EQUAL)     &none               &kp RA(N7)  &kp LS(N8)        &kp EQUAL            &kp LS(N9)  &kp RA(N0)
+&trans  &kp RA(RIGHT_BRACKET)  &kp SLASH         &kp LS(RBKT)             &kp MINUS         &none               &kp NUBS    &kp RA(N8)        &kp LS(NON_US_HASH)  &kp RA(N9)  &kp LS(NON_US_BACKSLASH)  &trans
+                                                 &trans                   &mo 3             &trans              &trans      &trans            &trans
             >;
         };
 
