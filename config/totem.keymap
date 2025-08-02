@@ -83,6 +83,13 @@
             bindings = <&kp APOS>;
             key-positions = <18 19>;
         };
+
+        rsuper {
+            bindings = <&kp RGUI>;
+            key-positions = <37 31>;
+            layers = <1 0 2 3>;
+            slow-release;
+        };
     };
 
     behaviors {
