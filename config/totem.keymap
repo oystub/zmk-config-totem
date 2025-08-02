@@ -49,7 +49,7 @@
         };
 
         super {
-            bindings = <&kp LEFT_GUI>;
+            bindings = <&kp RIGHT_GUI>;
             key-positions = <32 37>;
             slow-release;
             layers = <0 1 2 3>;
