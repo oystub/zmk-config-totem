@@ -32,27 +32,24 @@
         esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&key_lock 5 ESCAPE>;
+            bindings = <&kp ESC>;
             layers = <0 1 2 3>;
         };
 
         ret {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
-            layers = <0 1 2 3>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12 13>;
-            layers = <0 1 2 3>;
         };
 
         super {
             bindings = <&kp LEFT_GUI>;
             key-positions = <32 37>;
             slow-release;
-            layers = <0 1 2 3>;
         };
 
         aa {
@@ -64,29 +61,32 @@
         shift_combo_left {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <13 12>;
-            layers = <0 1 2 3>;
         };
 
         shift_combo_right {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <16 17>;
-            layers = <0 1 2 3>;
         };
 
         dual_shift {
             bindings = <&caps>;
             key-positions = <12 13 16 17>;
-            layers = <0 1 2 3>;
         };
 
         ae {
             bindings = <&kp APOS>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         BT {
             bindings = <&mo 4>;
             key-positions = <32 33 34>;
+        };
+
+        num_overlay {
+            bindings = <&tog 5>;
+            key-positions = <35 36 37>;
         };
     };
 
@@ -114,22 +114,6 @@
             label = "CAPS";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kp CAPSLOCK>;
-        };
-
-        key_lock: key_lock {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KEY_LOCK";
-            bindings = <&tog>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <1500>;
-        };
-
-        tap_unlock: tap_unlock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_UNLOCK";
-            #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&none>, <&tog 5>;
         };
     };
 
@@ -179,19 +163,19 @@
         BT {
             label = "BT";
             bindings = <
-            &bt BT_CLR    &none         &soft_off     &none         &none           &trans  &trans  &trans  &trans  &trans
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &none         &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &none           &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans        &trans        &trans          &trans  &trans  &trans
+            &bt BT_CLR    &trans        &soft_off     &trans        &trans          &trans        &trans        &soft_off     &trans        &trans
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&bt BT_CLR  &trans        &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &trans          &trans        &out OUT_USB  &out OUT_TOG  &out OUT_BLE  &trans        &trans
+                                        &trans        &trans        &trans          &trans        &trans        &trans
             >;
         };
 
-        lock {
+        num_overlay {
             bindings = <
-             &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
-             &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
-&tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock  &tap_unlock
-                                       &tap_unlock  &tap_unlock  &tap_unlock    &tap_unlock  &tap_unlock  &tap_unlock
+        &trans  &trans    &kp UP_ARROW  &trans     &trans    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+        &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+&trans  &trans  &trans    &trans        &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans        &trans     &trans    &trans  &trans  &trans
             >;
         };
     };
