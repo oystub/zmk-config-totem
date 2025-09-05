@@ -102,13 +102,6 @@
             quick-tap-ms = <100>;
         };
 
-        numbers: numbers {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NUMBERS";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 2>, <&sl 2>;
-        };
-
         caps: caps {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS";
@@ -123,10 +116,10 @@
         base {
             label = "BASE";
             bindings = <
-              &kp Q  &kp W  &kp E             &kp R     &kp T        &kp Y       &kp U  &kp I          &kp O    &kp P
-              &kp A  &kp S  &kp D             &kp F     &kp G        &kp H       &kp J  &kp K          &kp L    &kp SEMI
-&kp LEFT_ALT  &kp Z  &kp X  &kp C             &kp V     &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RGUI
-                            &kp LEFT_CONTROL  &numbers  &kp SPACE    &kp DELETE  &mo 1  &kp BACKSPACE
+              &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y       &kp U  &kp I          &kp O    &kp P
+              &kp A  &kp S  &kp D             &kp F  &kp G        &kp H       &kp J  &kp K          &kp L    &kp SEMI
+&kp LEFT_ALT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RGUI
+                            &kp LEFT_CONTROL  &mo 2  &kp SPACE    &kp DELETE  &mo 1  &kp BACKSPACE
             >;
         };
 
