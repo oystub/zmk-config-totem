@@ -68,8 +68,8 @@
             key-positions = <16 17>;
         };
 
-        dual_shift {
-            bindings = <&caps>;
+        caps_word {
+            bindings = <&caps_word>;
             key-positions = <6 7>;
         };
 
@@ -88,6 +88,11 @@
             bindings = <&tog 5>;
             key-positions = <35 36 37>;
         };
+
+        caps_lock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <3 2>;
+        };
     };
 
     behaviors {
@@ -100,13 +105,6 @@
             tapping-term-ms = <180>;
             flavor = "balanced";
             quick-tap-ms = <100>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS";
-            #binding-cells = <0>;
-            bindings = <&caps_word>, <&kp CAPSLOCK>;
         };
     };
 
