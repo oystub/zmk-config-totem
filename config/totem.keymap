@@ -70,7 +70,7 @@
 
         dual_shift {
             bindings = <&caps>;
-            key-positions = <12 13 16 17>;
+            key-positions = <6 7>;
         };
 
         ae {
