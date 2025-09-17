@@ -69,8 +69,8 @@
         };
 
         caps_word {
-            bindings = <&hold_caps_word 0 0>;
-            key-positions = <6 7>;
+            bindings = <&none>;
+            key-positions = <6 7 8>;
         };
 
         ae {
@@ -90,8 +90,8 @@
         };
 
         caps_lock {
-            bindings = <&hold_kp CAPSLOCK 0>;
-            key-positions = <3 2>;
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <3 2 1>;
         };
     };
 
@@ -105,24 +105,6 @@
             tapping-term-ms = <180>;
             flavor = "balanced";
             quick-tap-ms = <100>;
-        };
-
-        hold_caps_word: hold_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_CAPS_WORD";
-            bindings = <&caps_word>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        hold_kp: hold_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_KP";
-            bindings = <&kp>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <500>;
         };
     };
 
