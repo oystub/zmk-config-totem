@@ -69,7 +69,7 @@
         };
 
         caps_word {
-            bindings = <&caps_word>;
+            bindings = <&caps_word_mod>;
             key-positions = <6 7 8>;
         };
 
@@ -105,6 +105,13 @@
             tapping-term-ms = <180>;
             flavor = "balanced";
             quick-tap-ms = <100>;
+        };
+
+        caps_word_mod: caps_word_mod {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD_MOD";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z FSLH>;
         };
     };
 
