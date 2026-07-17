@@ -33,7 +33,7 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 4>;
         };
 
         ret {
@@ -80,7 +80,7 @@
         };
 
         BT {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <32 33 34>;
         };
 
@@ -128,7 +128,7 @@
             bindings = <
        &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y       &kp U  &kp I          &kp O    &kp P
        &kp A  &kp S  &kp D             &kp F  &kp G        &kp H       &kp J  &kp K          &kp L    &kp SEMI
-&mo 3  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp LEFT_ALT
+&mo 4  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp LEFT_ALT
                      &kp LEFT_CONTROL  &mo 2  &kp SPACE    &kp DELETE  &mo 1  &kp BACKSPACE
             >;
         };
@@ -153,16 +153,6 @@
             >;
         };
 
-        FKEYS {
-            label = "FKEYS";
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-        &trans  &trans  &trans  &trans  &trans    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F11  &kp F12  &trans  &trans  &trans   &trans
-                        &trans  &trans  &trans    &trans   &trans   &trans
-            >;
-        };
-
         BT {
             label = "BT";
             bindings = <
@@ -170,6 +160,16 @@
        &bt BT_CLR_ALL  &none  &none       &none   &none     &none         &out OUT_USB  &out OUT_BLE  &none         &none
 &none  &none           &none  &bt BT_CLR  &none   &none     &none         &out OUT_TOG  &none         &none         &none         &none
                               &trans      &trans  &trans    &trans        &trans        &trans
+            >;
+        };
+
+        FKEYS {
+            label = "FKEYS";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+        &trans  &trans  &trans  &trans  &trans    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F11  &kp F12  &trans  &trans  &trans   &trans
+                        &trans  &trans  &trans    &trans   &trans   &trans
             >;
         };
     };
